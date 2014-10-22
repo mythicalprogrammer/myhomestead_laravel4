@@ -1,0 +1,22 @@
+---
+ip: "192.168.10.10"
+memory: 2048
+cpus: 1
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: ~/Documents/startup/unrequited/sites/devenvi/site
+      to: /home/vagrant/site
+
+sites:
+    - map: example.com 
+      to: /home/vagrant/site/devi/public
+      name: devi
+
+variables:
+    - key: APP_ENV
+      value: local
